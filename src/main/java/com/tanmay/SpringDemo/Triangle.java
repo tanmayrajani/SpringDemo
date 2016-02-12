@@ -1,28 +1,39 @@
 package com.tanmay.SpringDemo;
 
 public class Triangle {
-    private String type;
-    private int height;
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
 
-    public Triangle(String type, int height) {
-        this.type = type;
-        this.height = height;
+    public Point getPointA() {
+        return pointA;
     }
 
-    public int getHeight() {
-        return height;
+    public void setPointA(Point pointA) {
+        this.pointA = pointA;
     }
 
-    public String getType() {
-        return type;
-
+    public Point getPointB() {
+        return pointB;
     }
 
-//    public void setType(String type) {
-//        this.type = type;
-//    }
+    public void setPointB(Point pointB) {
+        this.pointB = pointB;
+    }
+
+    public Point getPointC() {
+        return pointC;
+    }
+
+    public void setPointC(Point pointC) {
+        this.pointC = pointC;
+    }
 
     public void draw(){
-        System.out.println(getType()+" Triangle Drawn of height "+getHeight());
+        System.out.println("A: "+getPointA().getX()+" , "+getPointA().getY());
+        System.out.println("B: "+getPointB().getX()+" , "+getPointB().getY());
+        System.out.println("C: "+getPointC().getX()+" , "+getPointC().getY());
+        System.out.println("Drawing it now.....");
     }
+
 }
