@@ -3,28 +3,23 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="trianlge" class="com.tanmay.SpringDemo.Triangle">
-        <property name="pointA" ref="firstPoint"/>
-        <property name="pointB">
-            <!--INNER BEAN-->
-            <bean class="com.tanmay.SpringDemo.Point">
-                <property name="x" value="-20"/>
-                <property name="y" value="0"/>
-            </bean>
-        </property>
-        <property name="pointC" ref="anotherPoint-alias"/>
+    <bean id="trianlge" class="com.tanmay.SpringDemo.Triangle" autowire="byName">
+
     </bean>
 
-    <bean id="firstPoint" class="com.tanmay.SpringDemo.Point">
+    <bean id="pointA" class="com.tanmay.SpringDemo.Point">
         <property name="x" value="0"/>
         <property name="y" value="0"/>
     </bean>
 
-    <bean id="anotherPoint" class="com.tanmay.SpringDemo.Point">
+    <bean id="pointB" class="com.tanmay.SpringDemo.Point">
         <property name="x" value="20"/>
         <property name="y" value="0"/>
     </bean>
-    <!---->
-    <alias name="anotherPoint" alias="anotherPoint-alias"/>
+
+    <bean id="pointC" class="com.tanmay.SpringDemo.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="-20"/>
+    </bean>
 
 </beans>
