@@ -5,6 +5,6 @@
 
 
     <bean id="trianlge" class="com.tanmay.SpringDemo.Triangle">
-        <property name="type" value="Equilateral"></property>
+        <property name="type" value="Equilateral"/>
     </bean>
 </beans>
